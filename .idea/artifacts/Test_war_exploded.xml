@@ -1,0 +1,43 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Test:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Test_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Test/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Test" />
+          <element id="module-output" name="Test.main" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Gradle: org.springframework:spring-web:5.2.12.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-webmvc:5.2.12.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-aop:5.2.12.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-beans:5.2.12.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-context:5.2.12.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-core:5.2.12.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-expression:5.2.12.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-jcl:5.2.12.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.apache.tomcat:tomcat-annotations-api:9.0.43" />
+          <element id="library" level="project" name="Gradle: org.apache.tomcat.embed:tomcat-embed-core:9.0.43" />
+          <element id="library" level="project" name="Gradle: javax.servlet:jstl:1.2" />
+          <element id="library" level="project" name="Gradle: commons-beanutils:commons-beanutils:1.8.0" />
+          <element id="library" level="project" name="Gradle: commons-collections:commons-collections:3.2.2" />
+          <element id="library" level="project" name="Gradle: commons-digester:commons-digester:2.0" />
+          <element id="library" level="project" name="Gradle: org.apache.tiles:tiles-api:3.0.8" />
+          <element id="library" level="project" name="Gradle: org.apache.tiles:tiles-autotag-core-runtime:1.2" />
+          <element id="library" level="project" name="Gradle: org.apache.tiles:tiles-core:3.0.8" />
+          <element id="library" level="project" name="Gradle: org.apache.tiles:tiles-jsp:3.0.8" />
+          <element id="library" level="project" name="Gradle: org.apache.tiles:tiles-request-api:1.0.7" />
+          <element id="library" level="project" name="Gradle: org.apache.tiles:tiles-request-jsp:1.0.7" />
+          <element id="library" level="project" name="Gradle: org.apache.tiles:tiles-request-servlet:1.0.7" />
+          <element id="library" level="project" name="Gradle: org.apache.tiles:tiles-servlet:3.0.8" />
+          <element id="library" level="project" name="Gradle: org.apache.tiles:tiles-template:3.0.8" />
+          <element id="library" level="project" name="Gradle: org.slf4j:jcl-over-slf4j:1.7.6" />
+          <element id="library" level="project" name="Gradle: org.slf4j:slf4j-api:1.7.25" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../Utility/javax.servlet.jsp.jstl-api-1.2.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../Utility/taglibs-standard-impl-1.2.5.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
