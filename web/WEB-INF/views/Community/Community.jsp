@@ -9,7 +9,7 @@
 	<div class="card shadow mb-4">
 		<div class="card-header py-3">
 			<h6 class="m-0 font-weight-bold" style="color: gray;">Community</h6>
-			<a href="<c:url value='/community/write'/>"
+			<a href="<c:url value='/Community/write'/>"
 				class="btn btn-info btn-icon-split" style="float: right"> <span
 				class="text">글쓰기</span>
 			</a>

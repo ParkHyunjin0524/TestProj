@@ -1,20 +1,21 @@
 package com.test.auth;
 
-import org.springframework.stereotype.Service;
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import javax.annotation.Resource;
 import java.util.List;
 import java.util.Map;
 
-@Service("authService")
-public class AuthImpl implements AuthService{
+@Repository("authDAO")
+public class AuthDAO implements AuthService{
 
-    @Resource(name="authDAO")
-    private AuthDAO dao;
-
+    @Autowired
+    private SqlSessionTemplate sqlMapper;
     @Override
-    public int insertMember(Map map) {
-        return dao.insertMember(map);
+    public int insertMember(Map map){
+        return sqlMapper.insert("insertMember",map);
     }
 
     @Override
@@ -31,4 +32,6 @@ public class AuthImpl implements AuthService{
     public List<AuthDTO> selectListMember(Map map) {
         return null;
     }
+
+
 }

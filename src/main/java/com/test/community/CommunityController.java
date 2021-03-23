@@ -19,9 +19,15 @@ public class CommunityController {
         model.setViewName("Community/Community.tiles");
         return model;
     }
-    @RequestMapping(value = "wirte",method = RequestMethod.GET)
+    @RequestMapping(value = "write",method = RequestMethod.GET)
     public ModelAndView co_write(ModelAndView model){
         model.setViewName("Community/Write.tiles");
+        return model;
+    }
+    @RequestMapping(value = "writer",method = RequestMethod.GET)
+    public ModelAndView co_writer(ModelAndView model){
+        //Write.jsp 에서 글작성 submit 후에 거치는 Controller
+        model.setViewName("Community/Community.tiles");
         return model;
     }
 }

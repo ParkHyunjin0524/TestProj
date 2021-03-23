@@ -1,9 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<style>
-    .label :hover{color: black}
-
-</style>
 <section>
 <div class="container-fluid">
     <div class="row no-gutters">
@@ -55,7 +51,7 @@
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label class="label" id="daumserch" onclick="execDaumPostcode()">우편번호 찾기</label>
+                                <label class="label" id="daumserch" style="cursor: pointer" onclick="execDaumPostcode()">우편번호 찾기</label>
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -96,6 +92,7 @@
 </div>
 </section>
 <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="<c:url value='/js/membervalidate.js'/>"></script>
 <script>
     //주소찾기
