@@ -14,17 +14,17 @@ public class CommunityController {
     @Resource(name="communityService")
     private CommunityImpl communityService;
 
-    @RequestMapping(value = "community",method = RequestMethod.GET)
+    @RequestMapping(value = "Community",method = RequestMethod.GET)
     public ModelAndView community(ModelAndView model){
         model.setViewName("Community/Community.tiles");
         return model;
     }
-    @RequestMapping(value = "write",method = RequestMethod.GET)
+    @RequestMapping(value = "Write",method = RequestMethod.GET)
     public ModelAndView co_write(ModelAndView model){
         model.setViewName("Community/Write.tiles");
         return model;
     }
-    @RequestMapping(value = "writer",method = RequestMethod.GET)
+    @RequestMapping(value = "Writer",method = RequestMethod.GET)
     public ModelAndView co_writer(ModelAndView model){
         //Write.jsp 에서 글작성 submit 후에 거치는 Controller
         model.setViewName("Community/Community.tiles");

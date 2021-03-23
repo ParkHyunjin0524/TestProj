@@ -15,19 +15,28 @@ public class AuthController {
     @Autowired
     private AuthImpl authService;
 
-    @RequestMapping(value = "login",method = RequestMethod.GET)
+    @RequestMapping(value = "Login",method = RequestMethod.GET)
     public ModelAndView login(ModelAndView model){
         model.setViewName("Auth/Login.tiles");
         return model;
     }
 
-    @GetMapping("register")
+    @GetMapping("Register")
     public ModelAndView register(ModelAndView model){
         model.setViewName("Auth/Register.tiles");
         return model;
     }
-    @PostMapping("loginSuccess")
-    public ModelAndView locginSuccess(@RequestParam Map<String, Object> map, ModelAndView model ){
+    @PostMapping("LoginSuccess")
+    public ModelAndView loginSuccess(@RequestParam Map<String, Object> map, ModelAndView model ){
+        //주소 합치기
+        String address = (String)map.get("address");
+        try {
+            String detailAddress = (String)map.get("detailAddress");
+            System.out.println("address:"+address);
+            System.out.println("detailAddress:"+detailAddress);
+        }catch (NullPointerException e){
+            System.out.println("address:"+address);
+        }
         authService.insertMember(map);
         model.setViewName("home.tiles");
         return model;

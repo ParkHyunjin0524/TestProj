@@ -43,7 +43,7 @@
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item"><a href="<c:url value="/"/>" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="<c:url value="/Community/community"/>" class="nav-link">Community</a></li><!--/community/community-->
+                    <li class="nav-item"><a href="<c:url value="/Community/Community"/>" class="nav-link">Community</a></li><!--/community/community-->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Service</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown04">
@@ -53,7 +53,7 @@
                         </div>
                     </li>
                     <!-- 	        	<li class="nav-item"><a href="javascript:isLogin('login')" class="nav-link">로그인/회원가입</a></li> -->
-                    <li class="nav-item"><a href="<c:url value="/Auth/login"/>" class="nav-link">로그인/회원가입</a></li><!--/Auth/login-->
+                    <li class="nav-item"><a href="<c:url value="/Auth/Login"/>" class="nav-link">로그인/회원가입</a></li><!--/Auth/login-->
                 </ul>
             </div>
         </div>
