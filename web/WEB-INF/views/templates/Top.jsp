@@ -13,7 +13,7 @@
 
 <head>
     <!-- Title -->
-    <title>스프링RestTest</title>
+    <title>Pet Sitting</title>
     <meta charset="UTF-8">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,13 +30,8 @@
     <link rel="stylesheet" href="<c:url value="/css/jquery.timepicker.css"/>">
     <link rel="stylesheet" href="<c:url value="/css/flaticon.css"/>">
     <link rel="stylesheet" href="<c:url value="/css/style.css"/>">
-
-    <!-- include summernote css/js -->
-    <script src="<c:url value="/summernote/summernote-lite.js"/>"></script>
-    <link rel="stylesheet" href="<c:url value="/summernote/summernote-lite.css"/>">
-    <script src="<c:url value="/summernote/summernote-ko-KR.js"/>"></script>
-    <!-- ##### Header Area Start ##### -->
-
+    <!-- Favicon -->
+    <link href='<c:url value="/images/dog_foot.jpg"/>' rel="icon" type="image/jpg">
 </head>
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -48,7 +43,7 @@
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item"><a href="<c:url value="/"/>" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="<c:url value=""/>" class="nav-link">Community</a></li><!--/community/community-->
+                    <li class="nav-item"><a href="<c:url value="/Community/community"/>" class="nav-link">Community</a></li><!--/community/community-->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Service</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown04">

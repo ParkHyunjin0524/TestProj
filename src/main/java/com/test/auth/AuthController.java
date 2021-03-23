@@ -1,16 +1,18 @@
 package com.test.auth;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
+import java.util.Map;
 
 @RequestMapping("/Auth")
 @RestController
 public class AuthController {
 
-    @Resource(name="authService")
+    @Autowired
     private AuthImpl authService;
 
     @RequestMapping(value = "login",method = RequestMethod.GET)
@@ -25,10 +27,9 @@ public class AuthController {
         return model;
     }
     @PostMapping("loginSuccess")
-    public ModelAndView locginSuccess(@ModelAttribute("memberInfo") AuthDTO authDTO, ModelAndView model ){
-        System.out.println(authDTO);
+    public ModelAndView locginSuccess(@RequestParam Map<String, Object> map, ModelAndView model ){
+        authService.insertMember(map);
         model.setViewName("home.tiles");
-
         return model;
     }
 }
