@@ -48,7 +48,7 @@
                                 <div style="display:inline" class="mt-30 col-8">
                                     <button type="submit" class="btn btn-success" style="border:none;">로그인</button>
                                     <button type="button" class="btn btn-success" style="border:none;">
-                                        <a style="color: white" href="<c:url value="/Auth/register"/>">회원가입</a></button>
+                                        <a style="color: white" href="<c:url value="/Auth/Register"/>">회원가입</a></button>
                                     <button type="button" class="btn btn-success" style="border:none;">아이디/비빌번호찾기</button>
                                 </div>
                             </div>

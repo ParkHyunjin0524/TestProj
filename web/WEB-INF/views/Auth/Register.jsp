@@ -6,7 +6,7 @@
         <div class="col-md-7">
             <div class="contact-wrap w-100 p-md-5 p-4">
                 <h3 class="mb-4">회원가입</h3>
-                <form method="POST" id="contactForm" name="contactForm" action="<c:url value="/Auth/loginSuccess"/>" class="contactForm">
+                <form method="POST" id="contactForm" name="contactForm" action="<c:url value="/Auth/LoginSuccess"/>" class="contactForm">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -37,16 +37,14 @@
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label class="label" >전화번호</label>
-                                <textarea name="tel" class="form-control" id="tel"
-                                          cols="30" rows="4" placeholder="tel"></textarea>
+                                <label class="label" >주소</label>
+                                <input name="address" class="form-control" id="totaladdress"
+                                          cols="30" rows="4" placeholder="address"></input>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label class="label" >주소</label>
-                                <textarea name="address" class="form-control" id="address"
-                                          cols="30" rows="4" placeholder="address"></textarea>
+                                <input type="text" class="form-control" id="detailAddress" name="detailAddress" placeholder="상세주소">
                             </div>
                         </div>
                         <div class="col-md-12">
@@ -54,27 +52,7 @@
                                 <label class="label" id="daumserch" style="cursor: pointer" onclick="execDaumPostcode()">우편번호 찾기</label>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="form-group">
-                                <input type="text" readonly class="form-control" id="postcode" name="postcode" placeholder="우편번호">
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="form-group">
-                                <input type="text" readonly class="form-control" id="roadAddress" name="address1" placeholder="도로명주소">
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="form-group">
-                                <input type="text" readonly class="form-control" id="jibunAddress" name="address2" placeholder="지번주소">
-                            </div>
-                        </div>
                         <span id="guide" style="color:#999;display:none"></span>
-                        <div class="col-lg-8">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="detailAddress" name="address3" placeholder="상세주소">
-                            </div>
-                        </div>
                         <div class="col-md-12">
                             <div class="form-group">
                                 <input type="submit" value="Send" class="btn btn-primary">
@@ -120,10 +98,12 @@
                     extraRoadAddr = ' (' + extraRoadAddr + ')';
                 }
 
+                document.getElementById('totaladdress').value = roadAddr;
+
                 // 우편번호와 주소 정보를 해당 필드에 넣는다.
-                document.getElementById('postcode').value = data.zonecode;
-                document.getElementById("roadAddress").value = roadAddr;
-                document.getElementById("jibunAddress").value = data.jibunAddress;
+                // document.getElementById('postcode').value = data.zonecode;
+                // document.getElementById("roadAddress").value = roadAddr;
+                // document.getElementById("jibunAddress").value = data.jibunAddress;
 
                 var guideTextBox = document.getElementById("guide");
                 // 사용자가 '선택 안함'을 클릭한 경우, 예상 주소라는 표시를 해준다.

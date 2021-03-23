@@ -26,7 +26,7 @@
     <bean class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
         <property name="definitions">
             <list>
-                <value>/WEB-INF/views/templates/layout.xml</value>
+                <value>/WEB-INF/views/templates/Layout.xml</value>
             </list>
         </property>
     </bean>

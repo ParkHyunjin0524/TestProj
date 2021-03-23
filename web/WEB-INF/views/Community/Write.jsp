@@ -18,7 +18,7 @@
 
       <div class="col-md-12">
          <form onsubmit="return writeValidate()"
-            action="<c:url value="/Cmmunity/writer"/>" method="post"
+            action="<c:url value="/Cmmunity/Writer"/>" method="post"
             class="form-horizontal">
             <div class="form-group"></div>
             <br />
