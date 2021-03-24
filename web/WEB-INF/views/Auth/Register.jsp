@@ -6,7 +6,7 @@
         <div class="col-md-7">
             <div class="contact-wrap w-100 p-md-5 p-4">
                 <h3 class="mb-4">회원가입</h3>
-                <form method="POST" id="contactForm" name="contactForm" action="<c:url value="/Auth/LoginSuccess"/>" class="contactForm">
+                <form method="POST" id="contactForm" name="contactForm" action="<c:url value="/Auth/RegisterSuccess"/>" class="contactForm">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -37,6 +37,11 @@
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
+                                <label class="label" id="daumserch" style="cursor: pointer" onclick="execDaumPostcode()">우편번호 찾기</label>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
                                 <label class="label" >주소</label>
                                 <input name="address" class="form-control" id="totaladdress"
                                           cols="30" rows="4" placeholder="address"></input>
@@ -45,11 +50,6 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <input type="text" class="form-control" id="detailAddress" name="detailAddress" placeholder="상세주소">
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label class="label" id="daumserch" style="cursor: pointer" onclick="execDaumPostcode()">우편번호 찾기</label>
                             </div>
                         </div>
                         <span id="guide" style="color:#999;display:none"></span>

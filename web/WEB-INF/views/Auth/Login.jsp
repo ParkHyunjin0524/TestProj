@@ -26,7 +26,7 @@
                             </div>
                         </c:if>
                         <h4 class="mb-50 nav-item">로그인</h4>
-                        <form action="<c:url value=''/>" method="post">
+                        <form action="<c:url value="/Auth/LoginProcess"/>" method="post">
                             <div class="row">
                                 <div class=" col-3"> </div>
                                 <div class=" col-6">
@@ -39,7 +39,7 @@
                                 <div class=" col-3"> </div>
                                 <div class=" col-6">
                                     <div class="form-group">
-                                        <input type="password" class="form-control" name="password" id="password"
+                                        <input type="password" class="form-control" name="pwd" id="pwd"
                                                placeholder="Password">
                                     </div>
                                 </div>

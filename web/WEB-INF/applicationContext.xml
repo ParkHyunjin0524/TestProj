@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="dataSourceByJNDI"
           class="org.springframework.jdbc.datasource.DriverManagerDataSource">
@@ -11,7 +12,6 @@
         <property name="password" value="hj" />
     </bean>
 
-
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSourceByJNDI"/>
         <property name="configLocation" value="classpath:/configuration.xml"/>
@@ -19,5 +19,8 @@
     <bean id="template" class="org.mybatis.spring.SqlSessionTemplate">
         <constructor-arg ref="sqlSessionFactory"/>
     </bean>
+
+    <!-- 비밀번호 암호화 -->
+    <bean class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" id="bcryptPasswordEncoder"/>
 
 </beans>

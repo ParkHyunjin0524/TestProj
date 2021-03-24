@@ -29,8 +29,18 @@ public class AuthDAO implements AuthService{
     }
 
     @Override
+    public int insertAuth(Map map) {
+        return sqlMapper.insert("insertAuth",map);
+    }
+
+    @Override
     public List<AuthDTO> selectListMember(Map map) {
         return null;
+    }
+
+    @Override
+    public AuthDTO selectOneMember(Map map) {
+        return sqlMapper.selectOne("selectOneMember",map);
     }
 
 

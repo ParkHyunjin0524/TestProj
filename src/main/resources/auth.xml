@@ -2,8 +2,15 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
 <mapper namespace="com.test.auth">
    <insert id="insertMember" parameterType="Map">
         INSERT INTO member VALUES(#{email},#{pwd},#{name},#{address},#{tel})
    </insert>
+    <select id="selectOneMember" parameterType="Map" resultType="AuthDTO">
+        select email,pwd,name FROM member where email=#{email} and pwd=#{pwd}
+    </select>
+    <insert id="insertAuth" parameterType="Map">
+		INSERT INTO auth(authority,enabled,email) VALUES(DEFAULT, DEFAULT, #{email})
+	</insert>
 </mapper>

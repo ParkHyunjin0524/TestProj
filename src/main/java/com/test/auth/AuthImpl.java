@@ -28,7 +28,17 @@ public class AuthImpl implements AuthService{
     }
 
     @Override
+    public int insertAuth(Map map) {
+        return dao.insertAuth(map);
+    }
+
+    @Override
     public List<AuthDTO> selectListMember(Map map) {
         return null;
+    }
+
+    @Override
+    public AuthDTO selectOneMember(Map map) {
+        return dao.selectOneMember(map);
     }
 }

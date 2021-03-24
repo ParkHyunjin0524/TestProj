@@ -1,18 +1,12 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: user
-  Date: 2021-03-19
-  Time: 오후 5:43
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <!-- Title -->
+
     <title>Pet Sitting</title>
     <meta charset="UTF-8">
     <meta name="description" content="">
@@ -33,6 +27,28 @@
     <!-- Favicon -->
     <link href='<c:url value="/images/dog_foot.jpg"/>' rel="icon" type="image/jpg">
 </head>
+<script>
+    function isLogin(typeofbbs) {
+        $.ajax({
+            url : "<c:url value='/Auth/IsLogin.do' />",
+            type : "post",
+            success : function(data) {
+                console.log(typeofbbs);
+                if (data == 'yes') {
+                    if (typeofbbs == 'mypage')
+                        location.replace("<c:url value='/Mypage/Mypage'/>");
+                    else if (typeofbbs == 'community'){
+                        location.replace("<c:url value='/Community/Community'/>");
+                    }
+                } else {
+                    alert('로그인 후 이용할 수 있습니다.');
+                    location.replace("<c:url value='/Auth/Login.do' />");
+                }
+            }
+        });
+    }
+
+</script>
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
         <div class="container">
@@ -43,7 +59,9 @@
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item"><a href="<c:url value="/"/>" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="<c:url value="/Community/Community"/>" class="nav-link">Community</a></li><!--/community/community-->
+                    <!--<li class="nav-item"><a href="" class="nav-link">Community</a></li>--><!--/community/community-->
+                    <li class="nav-item"><a class="nav-link" href="javascript:isLogin('community')">Community</a></li>
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Service</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown04">
@@ -52,8 +70,17 @@
                             <a class="dropdown-item" href="#">사료</a>
                         </div>
                     </li>
-                    <!-- 	        	<li class="nav-item"><a href="javascript:isLogin('login')" class="nav-link">로그인/회원가입</a></li> -->
-                    <li class="nav-item"><a href="<c:url value="/Auth/Login"/>" class="nav-link">로그인/회원가입</a></li><!--/Auth/login-->
+
+                    <sec:authorize access="isAnonymous()">
+                        <li class="nav-item"><a href="<c:url value="/Auth/Login"/>" class="nav-link">로그인/회원가입</a></li><!--/Auth/login-->
+                    </sec:authorize>
+                    <sec:authorize access="isAuthenticated()">
+                        <li class="nav-item"><a href="<c:url value="/Auth/Logout"/>" class="nav-link">로그아웃</a></li><!--/Auth/logout-->
+                        <li class="nav-item"><a href="<c:url value=""/>" class="nav-link">마이페이지</a></li><!--/Auth/logout-->
+                    </sec:authorize>
+
+
+
                 </ul>
             </div>
         </div>
