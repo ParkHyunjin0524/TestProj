@@ -65,9 +65,9 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Service</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown04">
-                            <a class="dropdown-item" href="#">홈케어</a>
-                            <a class="dropdown-item" href="#">그루밍</a>
-                            <a class="dropdown-item" href="#">사료</a>
+                            <a class="dropdown-item" href="#">우석</a>
+                            <a class="dropdown-item" href="#">현진</a>
+                            <a class="dropdown-item" href="#">찬구</a>
                         </div>
                     </li>
 
@@ -78,9 +78,6 @@
                         <li class="nav-item"><a href="<c:url value="/Auth/Logout"/>" class="nav-link">로그아웃</a></li><!--/Auth/logout-->
                         <li class="nav-item"><a href="<c:url value=""/>" class="nav-link">마이페이지</a></li><!--/Auth/logout-->
                     </sec:authorize>
-
-
-
                 </ul>
             </div>
         </div>
